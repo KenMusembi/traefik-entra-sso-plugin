@@ -1,0 +1,12 @@
+displayName: Microsoft Entra ID Plugin
+type: middleware
+iconPath: .assets/icon.png
+
+import: github.com/KenMusembi/traefik-entra-sso-plugin
+
+summary: 'Grant requst after entra id auth'
+
+testData:
+  Headers:
+    X-Demo: test
+    X-URL: '{{URL}}'
