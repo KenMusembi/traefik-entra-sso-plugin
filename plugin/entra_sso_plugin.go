@@ -53,7 +53,7 @@ func (e *EntraSSO) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 
 	provider, err := oidc.NewProvider(ctx, fmt.Sprintf("https://login.microsoftonline.com/%s/v2.0", tenantID))
 	if err != nil {
-		http.Error(rw, "Internal Server Error", http.StatusInternalServerError)
+		http.Error(rw, "Internal Server Error 1", http.StatusInternalServerError)
 		return
 	}
 
@@ -61,19 +61,19 @@ func (e *EntraSSO) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 
 	rawIDToken, err := getRawIDToken(req)
 	if err != nil {
-		http.Error(rw, "Unauthorized", http.StatusUnauthorized)
+		http.Error(rw, "Unauthorized 1", http.StatusUnauthorized)
 		return
 	}
 
 	idToken, err := verifier.Verify(ctx, rawIDToken)
 	if err != nil {
-		http.Error(rw, "Unauthorized", http.StatusUnauthorized)
+		http.Error(rw, "Unauthorized 2", http.StatusUnauthorized)
 		return
 	}
 
 	var claims map[string]interface{}
 	if err := idToken.Claims(&claims); err != nil {
-		http.Error(rw, "Internal Server Error", http.StatusInternalServerError)
+		http.Error(rw, "Internal Server Error 2", http.StatusInternalServerError)
 		return
 	}
 
