@@ -36,10 +36,7 @@ jobs:
 
     
     - name: Install Go dependencies
-      run: |
-        go mod tidy
-        go mod download
-        go mod vendor
+      run: go mod tidy    
 
     - name: Run Makefile commands
       run: |
