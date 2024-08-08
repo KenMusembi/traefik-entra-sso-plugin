@@ -31,11 +31,7 @@ jobs:
       run: curl -sfL https://raw.githubusercontent.com/traefik/yaegi/master/install.sh | bash -s -- -b $(go env GOPATH)/bin ${YAEGI_VERSION}
 
     - name: Setup GOPATH
-      run: go env -w GOPATH=${{ github.workspace }}/go
-
-    
-    - name: Install Go dependencies
-      run: go mod tidy
+      run: go env -w GOPATH=${{ github.workspace }}/go    
     
     - name: List files
       run: ls -al 
