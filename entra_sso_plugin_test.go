@@ -154,9 +154,3 @@ func TestEntraSSO(t *testing.T) {
 		t.Errorf("Handler returned wrong status code: got %v, want %v", status, http.StatusUnauthorized)
 	}
 }
-
-// Main function to make the file a valid Go package with an entry point.
-func main() {
-	// This is typically where you would initialize your application or plugin.
-	// For this example, we'll just run the tests.
-}
