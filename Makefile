@@ -15,7 +15,7 @@ lint:
 
 # Build the Go application
 build:
-	go build -o $(BINARY_NAME) ./cmd
+	go build -o $(BINARY_NAME) /
 
 # Run tests
 test:
