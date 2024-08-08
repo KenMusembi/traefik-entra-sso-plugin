@@ -48,6 +48,7 @@ jobs:
 
     - name: Run Makefile commands
       run: |
+        go clean -modcache
         go mod tidy
         make 
         make lint
