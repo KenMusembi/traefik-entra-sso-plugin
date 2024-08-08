@@ -1,4 +1,4 @@
-package traefik_entra_sso_plugin_test
+package main_test
 
 import (
 	"context"
