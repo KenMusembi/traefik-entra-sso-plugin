@@ -52,6 +52,7 @@ jobs:
 
     - name: Run Makefile commands
       run: |
+        go mod tidy
         make 
         make lint
         make yaegi_test
