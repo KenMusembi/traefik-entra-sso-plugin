@@ -42,8 +42,8 @@ jobs:
       
     - name: Check Go file
       run: |
-        if [ -f entra_sso_plugi.go ]; then echo "go file found"; else echo "go file not found"; fi
-        cat main.go
+        if [ -f entra_sso_plugin.go ]; then echo "go file found"; else echo "go file not found"; fi
+        cat entra_sso_plugin.go
 
     - name: Install golangci-lint
       run: |
