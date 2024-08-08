@@ -12,7 +12,7 @@ default: lint test
 
 # Build the Go application
 build:
-	go build -o $(BINARY_NAME) .
+	go build -o $(BINARY_NAME) entra_sso_plugin.go
 
 # Run tests
 test:
