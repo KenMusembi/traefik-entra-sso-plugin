@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: configure
-      run: ./configure
+      run: Makefile
 
     - name: Install dependencies
       run: make
