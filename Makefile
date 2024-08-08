@@ -10,12 +10,9 @@ export GO111MODULE=on
 
 default: lint test
 
-lint:
-	golangci-lint run
-
 # Build the Go application
 build:
-	go build -o $(BINARY_NAME)
+	go build -o $(BINARY_NAME) .
 
 # Run tests
 test:
@@ -46,7 +43,7 @@ fmt:
 
 # Lint Go source code (requires golangci-lint to be installed)
 lint:
-	golangci-lint run
+	golangci-lint run ./...
 
 # Help target to show available commands
 help:
